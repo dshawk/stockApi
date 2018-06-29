@@ -15,6 +15,8 @@
 		1133E91320E6408300CB1E5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1133E91120E6408300CB1E5E /* LaunchScreen.storyboard */; };
 		1133E91E20E6408300CB1E5E /* stockApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133E91D20E6408300CB1E5E /* stockApiTests.swift */; };
 		1133E92920E6408300CB1E5E /* stockApiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133E92820E6408300CB1E5E /* stockApiUITests.swift */; };
+		1133E93920E647FA00CB1E5E /* myCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133E93820E647FA00CB1E5E /* myCell.swift */; };
+		1133E93C20E648BE00CB1E5E /* StockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133E93B20E648BE00CB1E5E /* StockInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		1133E92420E6408300CB1E5E /* stockApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stockApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1133E92820E6408300CB1E5E /* stockApiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stockApiUITests.swift; sourceTree = "<group>"; };
 		1133E92A20E6408300CB1E5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1133E93820E647FA00CB1E5E /* myCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCell.swift; sourceTree = "<group>"; };
+		1133E93B20E648BE00CB1E5E /* StockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockInfo.swift; sourceTree = "<group>"; };
 		7A8B1D38D068964DE354D46D /* Pods-stockApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stockApi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stockApi/Pods-stockApi.debug.xcconfig"; sourceTree = "<group>"; };
 		ACDE27EE5C5B7747A99A417B /* Pods_stockApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stockApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD68E5964C93440CAE52FEFC /* Pods-stockApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stockApi.release.xcconfig"; path = "Pods/Target Support Files/Pods-stockApi/Pods-stockApi.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,8 +108,10 @@
 		1133E90720E6408200CB1E5E /* stockApi */ = {
 			isa = PBXGroup;
 			children = (
+				1133E93D20E64E5400CB1E5E /* Controller */,
+				1133E93A20E6486F00CB1E5E /* Model */,
+				1133E93720E647E000CB1E5E /* View */,
 				1133E90820E6408200CB1E5E /* AppDelegate.swift */,
-				1133E90A20E6408200CB1E5E /* ViewController.swift */,
 				1133E90C20E6408200CB1E5E /* Main.storyboard */,
 				1133E90F20E6408300CB1E5E /* Assets.xcassets */,
 				1133E91120E6408300CB1E5E /* LaunchScreen.storyboard */,
@@ -130,6 +136,30 @@
 				1133E92A20E6408300CB1E5E /* Info.plist */,
 			);
 			path = stockApiUITests;
+			sourceTree = "<group>";
+		};
+		1133E93720E647E000CB1E5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1133E93820E647FA00CB1E5E /* myCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1133E93A20E6486F00CB1E5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1133E93B20E648BE00CB1E5E /* StockInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1133E93D20E64E5400CB1E5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1133E90A20E6408200CB1E5E /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		20C645834BD75ADA56CCDE6E /* Frameworks */ = {
@@ -322,6 +352,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1133E90B20E6408200CB1E5E /* ViewController.swift in Sources */,
+				1133E93920E647FA00CB1E5E /* myCell.swift in Sources */,
+				1133E93C20E648BE00CB1E5E /* StockInfo.swift in Sources */,
 				1133E90920E6408200CB1E5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,8 +529,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX2G5DNFR8;
+				DEVELOPMENT_TEAM = QT3ZGLM5E7;
 				INFOPLIST_FILE = stockApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,8 +549,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX2G5DNFR8;
+				DEVELOPMENT_TEAM = QT3ZGLM5E7;
 				INFOPLIST_FILE = stockApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

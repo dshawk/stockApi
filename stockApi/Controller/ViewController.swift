@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadingData()
-        _ = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.loadingData), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(self.loadingData), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
